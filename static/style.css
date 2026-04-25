@@ -1,0 +1,124 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2b5876, #4e4376);
+  color: white;
+}
+
+/* Container */
+.container {
+  width: 350px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.container:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Title */
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* City name */
+h2 {
+  margin-top: 20px;
+  font-size: 26px;
+  text-transform: capitalize;
+}
+
+/* Temperature */
+.main-temp {
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Description */
+p {
+  margin-top: 8px;
+  font-size: 18px;
+  opacity: 0.9;
+  text-transform: capitalize;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Input focus */
+input:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Button */
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff7b00, #ff3c00);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff3c00, #ff7b00);
+}
+
+/* Error */
+.error {
+  margin-top: 10px;
+  color: #ff4d4d;
+}
+
+/* Animation */
+.container {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -2,25 +2,32 @@
 <html>
 <head>
     <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <h1>🌦️ Weather App</h1>
+<div class="container">
 
-    <form method="POST">
-        <input type="text" name="city" placeholder="Enter city">
-        <button type="submit">Get Weather</button>
-    </form>
+  <h1>🌦️ Weather App</h1>
 
-    {% if weather %}
-        <h2>{{ weather.city }}</h2>
-        <p>Temperature: {{ weather.temp }} °C</p>
-        <p>Condition: {{ weather.description }}</p>
-    {% endif %}
+  <form method="POST">
+    <input type="text" name="city" placeholder="Enter city">
+    <button type="submit">Get Weather</button>
+  </form>
 
-    {% if error %}
-        <p style="color:red;">{{ error }}</p>
-    {% endif %}
+  {% if weather %}
+    <h2 style="font-size: 28px; text-transform: capitalize;">
+      {{ weather.city }}</h2>
+    <h1 class="main-temp">{{ icon }} {{ weather.temp }}°C</h1>
+    <p style="text-transform: capitalize;">
+      {{ weather.description }}</p>
+  {% endif %}
+
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+
+</div>
 
 </body>
 </html>
