@@ -25,7 +25,9 @@
     </h2>
 
     <h1 class="main-temp">{{ icon }} {{ weather.temp }}°C</h1>
-
+<p class="note">
+  ⚠️ Note: Weather data may vary based on real-time API responses.
+</p>
     <p style="text-transform: capitalize;">
       {{ weather.description }}
     </p>
@@ -34,7 +36,10 @@
   {% if error %}
     <p class="error">{{ error }}</p>
   {% endif %}
-
+   <!-- ✅ NOTE YAHAN ADD KARO -->
+  <p class="note">
+    ⚠️ Note: Weather data may vary based on real-time API responses.
+  </p>
 </div>
 
 <!-- ✅ SCRIPT ALWAYS AT BOTTOM -->
