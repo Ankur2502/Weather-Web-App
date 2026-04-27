@@ -4,11 +4,15 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
 <div class="container">
 
   <h1>🌦️ Weather App</h1>
+
+  <!-- ✅ DATE TIME HERE -->
+  <p id="datetime" style="margin-top:10px; font-size:14px; opacity:0.8;"></p>
 
   <form method="POST">
     <input type="text" name="city" placeholder="Enter city">
@@ -17,10 +21,14 @@
 
   {% if weather %}
     <h2 style="font-size: 28px; text-transform: capitalize;">
-      {{ weather.city }}</h2>
+      {{ weather.city }}
+    </h2>
+
     <h1 class="main-temp">{{ icon }} {{ weather.temp }}°C</h1>
+
     <p style="text-transform: capitalize;">
-      {{ weather.description }}</p>
+      {{ weather.description }}
+    </p>
   {% endif %}
 
   {% if error %}
@@ -28,6 +36,18 @@
   {% endif %}
 
 </div>
+
+<!-- ✅ SCRIPT ALWAYS AT BOTTOM -->
+<script>
+function updateTime() {
+    const now = new Date();
+    const formatted = now.toLocaleString();
+    document.getElementById("datetime").innerHTML = formatted;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+</script>
 
 </body>
 </html>

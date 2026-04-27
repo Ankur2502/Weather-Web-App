@@ -122,3 +122,7 @@ button:hover {
     transform: translateY(0);
   }
 }
+#datetime {
+  font-size: 13px;
+  opacity: 0.7;
+}
