@@ -11,7 +11,6 @@
 
   <h1>🌦️ Weather App</h1>
 
-  <!-- ✅ DATE TIME HERE -->
   <p id="datetime" style="margin-top:10px; font-size:14px; opacity:0.8;"></p>
 
   <form method="POST">
@@ -25,8 +24,6 @@
     </h2>
 
     <h1 class="main-temp">{{ icon }} {{ weather.temp }}°C</h1>
-<p class="note">
-  ⚠️ Note: Weather data may vary based on real-time API responses.
 </p>
     <p style="text-transform: capitalize;">
       {{ weather.description }}
@@ -36,13 +33,11 @@
   {% if error %}
     <p class="error">{{ error }}</p>
   {% endif %}
-   <!-- ✅ NOTE YAHAN ADD KARO -->
   <p class="note">
     ⚠️ Note: Weather data may vary based on real-time API responses.
   </p>
 </div>
 
-<!-- ✅ SCRIPT ALWAYS AT BOTTOM -->
 <script>
 function updateTime() {
     const now = new Date();
